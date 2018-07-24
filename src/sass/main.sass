@@ -1,0 +1,360 @@
+@import "_fonts.sass"
+
+$primery-color: #fff
+$secondery-color: #606caf
+$none-image-color: #d6d6d6
+$open-semibold: 600
+$font-text: 24px
+$primery-font-text: 'OpenSans', sans-serif
+$aside-article-font: 'Montserrat-Regular', sans-serif
+$icon-size-header: 25px
+$icon-size-aside: 30px
+$border-round: 50%
+$mobile-text: 16px
+
+@mixin sectors 
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform-origin: left bottom;
+  background: $secondery-color
+
+@mixin skill-position
+  position: absolute
+  z-index: 2
+  font-size: 40px
+  font-family: $primery-font-text
+  top: 60px;
+  left: 50px;
+
+html
+  box-sizing: border-box
+
+body
+  background-color: $primery-color
+  margin: 0
+  padding: 0
+
+h1
+  font-size: 55px
+  margin-bottom: 15px
+  margin-top: 0px
+  font-family: 'Montserrat-Bold', sans-serif
+
+body > header
+  background-color: $secondery-color
+  color: $primery-color
+  padding: 120px 150px 90px 150px
+  display: flex
+
+  div
+    vertical-align: top
+    display: inline-block
+    border-radius: $border-round
+
+  img
+     border-radius: $border-round
+  
+  article
+    width: 100%; 
+    ul
+      max-width: 260px
+      float: right
+    li
+      margin-bottom: 10px
+      display: flex
+    i
+      margin-right: 30px
+ul
+  margin: 0
+  list-style-type: none
+  padding: 0
+
+li
+  font-size: $font-text
+  line-height: 35px
+  font-family: $primery-font-text
+
+.foto
+  margin-right: 55px
+
+.main-info
+  margin-top: 50px
+  width: 100%
+  p
+    text-align: left
+    font-size: 30px
+    margin: 0
+    font-weight: $open-semibold
+    font-family: $primery-font-text
+
+.content
+  display: flex
+
+h2
+ font-family: $aside-article-font
+ font-size: 30px
+ margin: 0
+
+aside
+  max-width: 25%
+  background-color: #fcfcfd 
+  padding: 70px 55px 0 150px
+
+  article
+    max-width: 440px;
+    display: flex
+    flex-direction: column
+    margin-bottom: 80px
+    &:last-child
+      margin-bottom: 0
+
+  header
+    display: flex
+    align-items: center
+    margin-bottom: 45px
+
+  header > i
+    font-size: $icon-size-aside
+    padding: 20px 25px
+    background-color: $secondery-color
+    border-radius: $border-round
+    color: $primery-color
+    margin-right: 40px
+  p
+    font-size: $font-text
+    line-height: 35px
+    margin: 0
+    font-family: $primery-font-text
+
+  .interests ul
+    padding: 0
+    display: flex
+    text-align: center
+    margin: 0
+    justify-content: space-between
+
+  .interests li
+    font-weight: $open-semibold
+    font-family: $primery-font-text
+    margin-right: 10%
+    font-weight: bold
+
+    &:last-child
+      margin-right: 0
+  
+  .interests li > i
+    border: 3px solid $secondery-color
+    border-radius: $border-round
+    font-size: 40px
+    padding: 20px 25px
+    color: $secondery-color
+    float: left
+    margin-bottom: 35px
+
+.company
+  font-weight: $open-semibold
+  font-family: $primery-font-text
+  color: $secondery-color
+
+.awwards
+  font-weight: $open-semibold
+  font-family: $primery-font-text
+
+.circle-index
+  content: " "
+  width: 32px
+  height: 32px
+  border: 3px solid $none-image-color
+  position: absolute
+  border-radius: $border-round
+  top: 35px
+  left: -60px
+
+
+.company-job > li
+  position: relative
+  margin-left: 60px
+  margin-bottom: 35px 
+  margin-right: 35px   
+  &:before
+    content: " "
+    height: 100%
+    border: 1px solid $none-image-color
+    position: absolute
+    left: -43px
+    top: 70px   
+  &:last-child
+    margin-bottom: 0
+    &:before
+      display: none
+
+section
+  padding: 70px 30px 120px 35px
+
+  header
+    display: flex
+    align-items: center
+    margin-bottom: 45px
+
+  header > i
+    font-size: $icon-size-aside
+    padding: 20px 25px
+    background-color: $secondery-color
+    border-radius: $border-round
+    color: $primery-color
+    margin-right: 40px
+
+  article
+    margin-bottom: 100px
+    &:last-child
+      margin-bottom: 0
+
+  article > ul
+    margin-left: 70px
+
+.section-content
+  display: flex
+
+  ul
+   margin-right: 10%
+   max-width: 260px;
+   width: 50%;
+
+.section-content > span
+  max-width: 530px
+  width: 50%;
+
+.skills-line
+  display: flex
+  margin-left: 70px
+  justify-content: space-between
+  text-align: center
+
+svg
+  width: 50%
+
+.skills-item p
+    font-size: $font-text
+    margin: 0;
+    font-family: $primery-font-text
+    font-weight: $open-semibold
+
+@media screen and (max-width: 1260px)
+  body > header
+    padding-left: 30px
+    padding-right: 30px
+
+  aside
+    padding-left: 30px 
+
+  .skills
+    margin-right: 5%
+  
+  .skills:last-child
+    margin-right: 0
+
+@media (max-width: 1080px)
+  aside
+    padding-right: 30px
+
+  aside article
+    max-width: 340px
+
+  .skills-line
+    margin-left: 0
+
+  aside header > i 
+    font-size: 20px
+    padding: 15px 
+
+  aside .interests li > i 
+    font-size: 20px
+    padding: 12px 12px
+  
+  section header > i
+    font-size: 20px
+    padding: 15px 
+
+  section article > ul 
+    margin-left: 5%;
+
+  h2
+   font-size: $mobile-text
+
+  li
+    font-size: $mobile-text
+
+  aside p
+    font-size: $mobile-text 
+
+  .main-info p
+    font-size: $mobile-text
+
+  h1
+    font-size: 38px
+  
+  .skills-item p
+    font-size: $mobile-text
+  
+@media (max-width: 767px)
+  .foto
+    margin: 0
+
+  body > header
+    padding: 30px
+    flex-direction: column
+    text-align: center
+
+  .main-info
+    margin-bottom: 30px
+    p
+      text-align: center
+
+  body > header article ul
+    max-width: 300px
+    margin: 0 auto
+    float: none
+    text-align: left
+
+  .content
+    flex-direction: column
+
+  aside
+    padding: 30px 
+    max-width: none
+
+    article
+      max-width: none
+      margin-bottom: 60px
+
+    .interests li > i 
+      font-size: 25px
+      padding: 15px 
+
+  section
+    padding: 30px 
+  
+  aside .interests li
+    margin-right: 10%
+
+  section article 
+    margin-bottom: 60px
+
+  .company-job > li
+    margin-right: 0 
+
+  section article:last-child
+    padding-bottom: 30px
+
+@media (max-width: 480px)
+  section article > ul 
+    margin-left: 0%
+
+  .skills-line
+    max-height: 80px
+
+  svg
+    width: 100%
